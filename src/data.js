@@ -7,18 +7,22 @@ const data = {
         {
             name: "YouTube",
             url: "https://youtube.com/abc",
+            url_color: "red",
         },
         {
             name: "Instagram",
             url: "https://instagram.com/abc",
+            url_color: "red",
         },
         {
             name: "YouTube",
             url: "https://youtube.com",
+            url_color: "red",
         },
         {
             name: "Instagram",
             url: "https://instagram.com",
+            url_color: "red",
         },
     ],
     links: [

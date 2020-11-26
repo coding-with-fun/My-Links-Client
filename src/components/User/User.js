@@ -3,7 +3,6 @@ import { UserContext } from "../../context/UserContext";
 import About from "./About";
 import Header from "./Header";
 import Links from "./Links";
-import TopLinks from "./TopLinks";
 
 const User = () => {
     const { SetUserData } = useContext(UserContext);
@@ -24,10 +23,6 @@ const User = () => {
             <hr />
 
             <About />
-
-            <hr />
-
-            <TopLinks />
 
             <hr />
 
