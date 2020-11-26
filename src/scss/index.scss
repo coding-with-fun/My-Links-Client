@@ -1,3 +1,6 @@
+// @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap");
+
 @import "./components/Admin/Admin.scss";
 @import "./components/Home/Home.scss";
 @import "./components/User/User.scss";
@@ -6,4 +9,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(0deg, rgb(253, 143, 103), rgb(212, 99, 163));
+    // font-family: "Lato", sans-serif;
+    font-family: "Karla", sans-serif;
+}
+
+.app__container {
+    overflow: scroll;
+    color: var(--light);
 }
