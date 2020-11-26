@@ -8,9 +8,15 @@ const Links = () => {
         <div className="links__container container">
             {user?.links.map((link) => {
                 return (
-                    <div className="link__container" key={link.url}>
-                        <a href={link.url}>{link.name}</a>
-                    </div>
+                    <a
+                        href={link.url}
+                        className="link__container"
+                        key={link.url}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        {link.name}
+                    </a>
                 );
             })}
         </div>

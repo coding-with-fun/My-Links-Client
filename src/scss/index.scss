@@ -11,9 +11,9 @@
 }
 
 body {
-    // background: linear-gradient(0deg, rgb(253, 143, 103), rgb(212, 99, 163));
-    background: var(--light);
+    background: var(--gray-dark);
     font-family: "Karla", sans-serif;
+    user-select: none;
 }
 
 html {
@@ -27,5 +27,5 @@ html::-webkit-scrollbar {
 }
 
 .app__container {
-    color: var(--dark);
+    color: var(--light);
 }
