@@ -17,7 +17,16 @@ body {
     font-family: "Karla", sans-serif;
 }
 
-.app__container {
+html {
     overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+.app__container {
     color: var(--light);
 }

@@ -1,14 +1,34 @@
 const data = {
     name: "Test User",
     user_name: "test-user",
+    about:
+        "feugiat scelerisque varius morbi enim nunc faucibus a pellentesque sit amet porttitor eget dolor morbi",
+    top_links: [
+        {
+            name: "YouTube",
+            url: "https://youtube.com/abc",
+        },
+        {
+            name: "Instagram",
+            url: "https://instagram.com/abc",
+        },
+        {
+            name: "YouTube",
+            url: "https://youtube.com",
+        },
+        {
+            name: "Instagram",
+            url: "https://instagram.com",
+        },
+    ],
     links: [
         {
             name: "YouTube",
-            url: "https://youtube.com",
+            url: "https://youtube.com/abc",
         },
         {
             name: "Instagram",
-            url: "https://instagram.com",
+            url: "https://instagram.com/abc",
         },
         {
             name: "YouTube",
@@ -20,35 +40,11 @@ const data = {
         },
         {
             name: "YouTube",
-            url: "https://youtube.com",
+            url: "https://youtube.com/abcd",
         },
         {
             name: "Instagram",
-            url: "https://instagram.com",
-        },
-        {
-            name: "YouTube",
-            url: "https://youtube.com",
-        },
-        {
-            name: "Instagram",
-            url: "https://instagram.com",
-        },
-        {
-            name: "YouTube",
-            url: "https://youtube.com",
-        },
-        {
-            name: "Instagram",
-            url: "https://instagram.com",
-        },
-        {
-            name: "YouTube",
-            url: "https://youtube.com",
-        },
-        {
-            name: "Instagram",
-            url: "https://instagram.com",
+            url: "https://instagram.com/abcd",
         },
     ],
 };

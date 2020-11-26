@@ -5,12 +5,11 @@ const Links = () => {
     const { user } = useContext(UserContext);
 
     return (
-        <div className="links__container">
+        <div className="links__container container">
             {user?.links.map((link) => {
                 return (
                     <div className="link__container" key={link.url}>
-                        <p>{link.name}</p>
-                        <p>{link.url}</p>
+                        <a href={link.url}>{link.name}</a>
                     </div>
                 );
             })}
