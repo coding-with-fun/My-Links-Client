@@ -2,7 +2,7 @@ const data = {
     name: "Test User",
     user_name: "test-user",
     about:
-        "feugiat scelerisque varius morbi enim nunc faucibus a pellentesque sit amet porttitor eget dolor morbi",
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu",
     top_links: [
         {
             name: "YouTube",
