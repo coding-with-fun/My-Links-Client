@@ -1,0 +1,31 @@
+body {
+    background: var(--gray-dark);
+    color: var(--light);
+}
+
+.user__container {
+    hr {
+        border-color: var(--light);
+    }
+
+    .header__container {
+        background: var(--gray-dark); //
+        border-bottom-color: var(--light);
+    }
+
+    .links__container {
+        .link__container {
+            border-color: var(--light);
+        }
+
+        .link__container:hover {
+            background: var(--light);
+            color: var(--gray-dark); //
+        }
+    }
+
+    .footer__container {
+        background: var(--light);
+        color: var(--gray-dark); //
+    }
+}

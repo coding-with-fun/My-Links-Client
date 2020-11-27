@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap");
 
+@import "./color.scss";
 @import "./components/Admin/Admin.scss";
 @import "./components/Home/Home.scss";
 @import "./components/User/User.scss";
@@ -21,8 +22,6 @@ html::-webkit-scrollbar {
 }
 
 body {
-    background: var(--gray-dark);
-    color: var(--light);
     font-family: "Karla", sans-serif;
     user-select: none;
 }
