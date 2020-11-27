@@ -23,7 +23,7 @@ const User = () => {
             <div className="details__container">
                 {user?.about && (
                     <>
-                        <hr />
+                        {/* <hr /> */}
 
                         <About />
                     </>
