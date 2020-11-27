@@ -5,7 +5,7 @@ const Links = () => {
     const { user } = useContext(UserContext);
 
     return (
-        <div className="links__container container">
+        <div className="user_links__container container">
             {user?.links.map((link) => {
                 return (
                     <a

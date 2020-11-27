@@ -8,12 +8,12 @@ body {
         border-color: var(--light);
     }
 
-    .header__container {
+    .user_header__container {
         background: var(--gray-dark); //
         border-bottom-color: var(--light);
     }
 
-    .links__container {
+    .user_links__container {
         .link__container {
             border-color: var(--light);
         }
@@ -24,7 +24,7 @@ body {
         }
     }
 
-    .footer__container {
+    .user_footer__container {
         background: var(--light);
         color: var(--gray-dark); //
     }

@@ -5,7 +5,7 @@ const About = () => {
     const { user } = useContext(UserContext);
 
     return (
-        <div className="about__container">
+        <div className="user_about__container">
             {user?.about && <span>{user.about}</span>}
         </div>
     );
