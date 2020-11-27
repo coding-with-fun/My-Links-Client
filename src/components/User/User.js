@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext";
 import About from "./About";
+import Footer from "./Footer";
 import Header from "./Header";
 import Links from "./Links";
 
@@ -37,6 +38,8 @@ const User = () => {
                     </>
                 )}
             </div>
+
+            <Footer />
         </div>
     );
 };
