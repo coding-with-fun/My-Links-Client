@@ -10,12 +10,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background: var(--gray-dark);
-    font-family: "Karla", sans-serif;
-    user-select: none;
-}
-
 html {
     overflow: scroll;
     -ms-overflow-style: none;
@@ -26,6 +20,9 @@ html::-webkit-scrollbar {
     display: none;
 }
 
-.app__container {
+body {
+    background: var(--gray-dark);
     color: var(--light);
+    font-family: "Karla", sans-serif;
+    user-select: none;
 }

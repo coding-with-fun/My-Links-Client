@@ -20,21 +20,23 @@ const User = () => {
         <div className="user__container container">
             <Header />
 
-            {user?.about ? (
-                <>
-                    <hr />
+            <div className="details__container">
+                {user?.about && (
+                    <>
+                        <hr />
 
-                    <About />
-                </>
-            ) : null}
+                        <About />
+                    </>
+                )}
 
-            {user?.links.length > 0 ? (
-                <>
-                    <hr />
+                {user?.links.length > 0 && (
+                    <>
+                        <hr />
 
-                    <Links />
-                </>
-            ) : null}
+                        <Links />
+                    </>
+                )}
+            </div>
         </div>
     );
 };
