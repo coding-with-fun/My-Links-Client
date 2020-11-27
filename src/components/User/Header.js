@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { UserContext } from "../../context/UserContext";
-import Image from "./Harsh_1000.jpg";
 
 const Header = () => {
     const { user } = useContext(UserContext);
@@ -8,7 +7,7 @@ const Header = () => {
     return (
         <div className="header__container container">
             <div className="img__container">
-                <img src={Image} alt="Profile Img" />
+                <img src={user?.userImage} alt="Profile Img" />
             </div>
 
             <div className="name__container">
