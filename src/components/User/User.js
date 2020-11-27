@@ -5,7 +5,7 @@ import Header from "./Header";
 import Links from "./Links";
 
 const User = () => {
-    const { SetUserData } = useContext(UserContext);
+    const { SetUserData, user } = useContext(UserContext);
 
     const fetchData = async () => {
         await SetUserData(window.location.pathname.substring(1));
@@ -20,13 +20,21 @@ const User = () => {
         <div className="user__container container">
             <Header />
 
-            <hr />
+            {user?.about ? (
+                <>
+                    <hr />
 
-            <About />
+                    <About />
+                </>
+            ) : null}
 
-            <hr />
+            {user?.links.length > 0 ? (
+                <>
+                    <hr />
 
-            <Links />
+                    <Links />
+                </>
+            ) : null}
         </div>
     );
 };

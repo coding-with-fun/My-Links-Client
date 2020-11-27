@@ -12,7 +12,7 @@ const Header = () => {
             </div>
 
             <div className="name__container">
-                <p>@{user?.user_name}</p>
+                <p>@{user?.userName}</p>
             </div>
         </div>
     );
