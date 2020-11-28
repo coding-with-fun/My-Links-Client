@@ -6,10 +6,12 @@ const Header = () => {
 
     return (
         <div className="admin_header__container">
-            <span>Welcome {user?.name}</span>
-            <span>Update Details</span>
+            <div className="welcome_container">Welcome {user?.name}</div>
+            <div className="heading_container">Update Details</div>
 
-            <img src={user?.userImage} alt="" />
+            <div className="image_container">
+                <img src={user?.userImage} alt="" />
+            </div>
         </div>
     );
 };

@@ -1,0 +1,17 @@
+.admin_user_details__container {
+    .form-group {
+        border-bottom: 1px solid var(--light);
+
+        label {
+            padding: 0 0.75rem;
+        }
+
+        .form-control {
+            background: transparent;
+            color: var(--light);
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}

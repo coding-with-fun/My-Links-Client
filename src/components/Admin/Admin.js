@@ -16,7 +16,7 @@ const Admin = () => {
     }, []);
 
     return (
-        <div className="admin__container">
+        <div className="admin__container container">
             <Header />
             <UserDetails />
         </div>

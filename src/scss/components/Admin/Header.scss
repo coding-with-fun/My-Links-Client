@@ -1,0 +1,23 @@
+.admin_header__container {
+    text-align: center;
+
+    .welcome_container {
+        font-size: 30px;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .heading_container {
+        font-size: 25px;
+    }
+
+    .image_container {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+    }
+}
