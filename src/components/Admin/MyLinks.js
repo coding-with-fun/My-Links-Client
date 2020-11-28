@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "../../context/UserContext";
+import InputDetails from "./InputDetails";
 
 const MyLinks = () => {
     const { user } = useContext(UserContext);
@@ -15,36 +16,11 @@ const MyLinks = () => {
                 {user.links.map((link) => {
                     return (
                         <div className="form-group" key={link.url}>
-                            <div className="details__container">
-                                <div className="details-group">
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        id="name"
-                                        className="form-control"
-                                        value={link.name}
-                                        readOnly
-                                    />
-                                    <span>
-                                        <i class="fas fa-pen"></i>
-                                    </span>
-                                </div>
-
-                                <div className="details-group">
-                                    <input
-                                        type="text"
-                                        name="url"
-                                        id="url"
-                                        className="form-control"
-                                        value={link.url}
-                                        readOnly
-                                    />
-                                    <span>
-                                        {/* <i class="fas fa-times-circle"></i> */}
-                                        <i class="fas fa-trash"></i>
-                                    </span>
-                                </div>
-                            </div>
+                            <InputDetails
+                                link={link}
+                                handleEdit={handleEdit}
+                                isEditing={isEditing}
+                            />
                         </div>
                     );
                 })}
