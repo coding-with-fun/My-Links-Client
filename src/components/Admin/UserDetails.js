@@ -27,11 +27,13 @@ const UserDetails = () => {
     }, [user]);
 
     const handleChange = (e) => {
-        if (e.target.id === "about" && e.target.value.length < 301) {
-            setUser({
-                ...user,
-                [e.target.id]: e.target.value,
-            });
+        if (e.target.id === "about") {
+            if (e.target.value.length < 301) {
+                setUser({
+                    ...user,
+                    [e.target.id]: e.target.value,
+                });
+            }
         } else {
             setUser({
                 ...user,
