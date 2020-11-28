@@ -6,18 +6,21 @@ const WebLink = () => {
     const [userLink, setUserLink] = useState("");
 
     const copyToClipBoard = async () => {
-        await navigator.clipboard.writeText(userLink);
+        await navigator.clipboard.writeText(userLink + user?.userName);
     };
 
     useEffect(() => {
-        setUserLink(`links.arccoder.in/${user?.userName}`);
+        setUserLink(`me.arccoder.in/`);
     }, [user]);
 
     return (
-        <div>
-            <span>{userLink}</span>
+        <div className="admin_web_link__container">
+            <div className="link">
+                <span className="pre-link">{userLink}</span>
+                <span className="user-link">{user?.userName}</span>
+            </div>
 
-            <span onClick={() => copyToClipBoard()}>
+            <span className="copy-icon" onClick={() => copyToClipBoard()}>
                 <i className="far fa-copy"></i>
             </span>
         </div>

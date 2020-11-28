@@ -1,0 +1,19 @@
+.admin_web_link__container {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    font-size: 22px;
+
+    .link {
+        margin-right: 15px;
+
+        .user-link {
+            font-weight: 600;
+        }
+    }
+
+    .copy-icon {
+        cursor: pointer;
+        font-size: 25px;
+    }
+}
