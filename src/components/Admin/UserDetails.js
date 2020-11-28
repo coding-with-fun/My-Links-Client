@@ -1,14 +1,43 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../context/UserContext";
 
 const UserDetails = () => {
     const { user, setUser } = useContext(UserContext);
 
-    const handleChange = (e) => {
-        setUser({
-            ...user,
-            [e.target.id]: e.target.value,
+    const [aboutCharacters, setAboutCharacters] = useState({
+        count: 0,
+        class: "",
+    });
+
+    useEffect(() => {
+        let aboutClass = "primary";
+
+        if (user.about.length > 250) {
+            aboutClass = "warning";
+        }
+
+        if (user.about.length > 299) {
+            aboutClass = "danger";
+        }
+
+        setAboutCharacters({
+            class: aboutClass,
+            count: user.about.length,
         });
+    }, [user]);
+
+    const handleChange = (e) => {
+        if (e.target.id === "about" && e.target.value.length < 301) {
+            setUser({
+                ...user,
+                [e.target.id]: e.target.value,
+            });
+        } else {
+            setUser({
+                ...user,
+                [e.target.id]: e.target.value,
+            });
+        }
     };
 
     return (
@@ -53,10 +82,14 @@ const UserDetails = () => {
                         name="about"
                         id="about"
                         className="form-control"
+                        aria-describedby="aboutHelp"
                         rows="3"
                         value={user?.about}
                         onChange={(e) => handleChange(e)}
                     />
+                    <label className={`about-count ${aboutCharacters.class}`}>
+                        {aboutCharacters.count}/300
+                    </label>
                 </div>
             </form>
         </div>
