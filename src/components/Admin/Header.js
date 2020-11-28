@@ -7,7 +7,6 @@ const Header = () => {
     return (
         <div className="admin_header__container">
             <div className="welcome_container">Welcome {user?.name}</div>
-            <div className="heading_container">Update Details</div>
 
             <div className="image_container">
                 <img src={user?.userImage} alt="" />

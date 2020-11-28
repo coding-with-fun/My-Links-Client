@@ -42,7 +42,7 @@ const UserDetails = () => {
 
     return (
         <div className="admin_user_details__container">
-            <form>
+            <form className="user-form">
                 <div className="form-group">
                     <label htmlFor="name">Name</label>
                     <input
@@ -83,7 +83,7 @@ const UserDetails = () => {
                         id="about"
                         className="form-control"
                         aria-describedby="aboutHelp"
-                        rows="3"
+                        rows="6"
                         value={user?.about}
                         onChange={(e) => handleChange(e)}
                     />
@@ -92,6 +92,10 @@ const UserDetails = () => {
                     </label>
                 </div>
             </form>
+
+            <div className="submit_btn__container">
+                <span>Update</span>
+            </div>
         </div>
     );
 };

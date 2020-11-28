@@ -6,13 +6,10 @@
         font-family: "Open Sans", sans-serif;
     }
 
-    .heading_container {
-        font-size: 25px;
-    }
-
     .image_container {
         display: flex;
         justify-content: center;
+        margin-top: 20px;
 
         img {
             width: 100px;
