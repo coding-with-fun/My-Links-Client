@@ -8,7 +8,7 @@ const Header = () => {
         <div className="admin_header__container">
             <span>Update Details</span>
 
-            <img src={user?.userImage} alt=""/>
+            <img src={user?.userImage} alt="" />
         </div>
     );
 };

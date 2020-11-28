@@ -1,8 +1,14 @@
-import React, { useEffect } from "react";
-import { fetchData } from "../../api/User.api";
+import React, { useContext, useEffect } from "react";
+import { UserContext } from "../../context/UserContext";
 import Header from "./Header";
 
 const Admin = () => {
+    const { GetUserData } = useContext(UserContext);
+
+    const fetchData = async () => {
+        await GetUserData();
+    };
+
     useEffect(() => {
         fetchData();
         // eslint-disable-next-line
