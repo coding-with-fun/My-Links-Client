@@ -9,6 +9,7 @@ export const UserProvider = (props) => {
     const [user, setUser] = useState();
 
     const GetUserData = async (username) => {
+        console.log("object");
         const user_data = await fetchData(username);
         setUser(user_data);
     };
