@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
-const InputDetails = ({ link, handleEdit, isEditing }) => {
+const InputDetails = ({ link }) => {
+    const [isEditing, setIsEditing] = useState(false);
+
+    const handleEdit = () => {
+        setIsEditing(!isEditing);
+    };
+
     return (
         <div className="admin_input_details__container">
             <div className="details__container">
@@ -11,7 +17,7 @@ const InputDetails = ({ link, handleEdit, isEditing }) => {
                         id="name"
                         className="form-control"
                         value={link.name}
-                        readOnly
+                        readOnly={isEditing ? false : true}
                     />
                     <span onClick={() => handleEdit()}>
                         {isEditing ? (
@@ -29,7 +35,7 @@ const InputDetails = ({ link, handleEdit, isEditing }) => {
                         id="url"
                         className="form-control"
                         value={link.url}
-                        readOnly
+                        readOnly={isEditing ? false : true}
                     />
                     <span>
                         <i className="fas fa-trash"></i>

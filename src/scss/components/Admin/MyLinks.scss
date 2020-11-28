@@ -20,6 +20,11 @@
                     span {
                         margin: auto;
                         cursor: pointer;
+                        color: var(--light);
+
+                        .fa-trash {
+                            color: var(--danger);
+                        }
                     }
                 }
             }
