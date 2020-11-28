@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext";
 import Header from "./Header";
+import UserDetails from "./UserDetails";
 
 const Admin = () => {
     const { GetUserData } = useContext(UserContext);
@@ -17,6 +18,7 @@ const Admin = () => {
     return (
         <div className="admin__container">
             <Header />
+            <UserDetails />
         </div>
     );
 };

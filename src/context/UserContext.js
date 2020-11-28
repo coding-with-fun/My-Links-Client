@@ -6,16 +6,22 @@ export const UserContext = createContext();
 
 // Provider component
 export const UserProvider = (props) => {
-    const [user, setUser] = useState();
+    const [user, setUser] = useState({
+        about: "",
+        email: "",
+        links: [],
+        name: "",
+        userImage: "",
+        userName: "",
+    });
 
     const GetUserData = async (username) => {
-        console.log("object");
         const user_data = await fetchData(username);
         setUser(user_data);
     };
 
     return (
-        <UserContext.Provider value={{ user, GetUserData }}>
+        <UserContext.Provider value={{ user, setUser, GetUserData }}>
             {props.children}
         </UserContext.Provider>
     );
