@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext";
 import Header from "./Header";
+import MyLinks from "./MyLinks";
 import UserDetails from "./UserDetails";
 import WebLink from "./WebLink";
 
@@ -21,6 +22,7 @@ const Admin = () => {
             <Header />
             <WebLink />
             <UserDetails />
+            <MyLinks />
         </div>
     );
 };

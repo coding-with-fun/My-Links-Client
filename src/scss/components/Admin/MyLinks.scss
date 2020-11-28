@@ -1,0 +1,28 @@
+.admin_my_links__container {
+    margin-top: 3rem;
+
+    .links-form {
+        .form-group {
+            margin-bottom: 2rem;
+
+            .details__container {
+                .details-group {
+                    display: grid;
+                    grid-template-columns: 90% 10%;
+                    margin-bottom: 0.5rem;
+
+                    .form-control {
+                        border: none;
+                        outline: none;
+                        box-shadow: none;
+                    }
+
+                    span {
+                        margin: auto;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
