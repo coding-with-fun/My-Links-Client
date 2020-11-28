@@ -10,9 +10,12 @@ export const fetchData = async (username) => {
     } else {
         const token = localStorage.getItem("my-links-user-id");
         url = BASE_URL + "/user/details";
-        headers = {
-            "x-auth-token": token,
-        };
+
+        if (token) {
+            headers = {
+                "x-auth-token": token,
+            };
+        }
     }
 
     const apiData = await Axios.get(url, { headers: headers });
