@@ -24,7 +24,6 @@ export const fetchData = async (username) => {
 };
 
 export const updateUser = async (body) => {
-    console.log(body);
     const url = mid_url + "/update";
     headers = {
         "x-auth-token": token,

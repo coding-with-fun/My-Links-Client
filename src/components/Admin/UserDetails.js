@@ -29,7 +29,6 @@ const UserDetails = () => {
     }, [user]);
 
     const handleSave = () => {
-        console.log(user);
         UpdateUser(user);
     };
 
