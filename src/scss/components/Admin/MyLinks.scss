@@ -1,51 +1,12 @@
+@import "./InputDetails.scss";
+@import "./AddLink.scss";
+
 .admin_my_links__container {
     margin-top: 5rem;
 
     .links-form {
         .form-group {
             margin-bottom: 2rem;
-
-            .admin_input_details__container {
-                display: grid;
-                grid-template-columns: 10% 90%;
-                margin-bottom: 0.5rem;
-
-                span {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    .fas {
-                        margin-bottom: 8px;
-                        cursor: pointer;
-                        padding: 7px;
-                    }
-                }
-
-                .details__container {
-                    .details-group {
-                        display: grid;
-                        grid-template-columns: 90% 10%;
-                        margin-bottom: 0.5rem;
-
-                        .form-control {
-                            border: none;
-                            outline: none;
-                            box-shadow: none;
-                        }
-
-                        span {
-                            margin: auto;
-                            cursor: pointer;
-                            color: var(--light);
-
-                            .fa-trash {
-                                color: var(--danger);
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
 }

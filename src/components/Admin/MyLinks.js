@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { UserContext } from "../../context/UserContext";
+import AddLink from "./AddLink";
 import InputDetails from "./InputDetails";
 
 const MyLinks = () => {
@@ -16,6 +17,8 @@ const MyLinks = () => {
                     );
                 })}
             </form>
+
+            <AddLink />
         </div>
     );
 };

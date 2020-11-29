@@ -1,0 +1,30 @@
+.admin_add_link__container {
+    .btn__container {
+        width: fit-content;
+        margin: auto;
+
+        span {
+            padding: 5px 10px;
+            background: var(--primary);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+
+    .add_link__container {
+        .input__container {
+            margin-left: 10.2%;
+
+            .details-group {
+                display: grid;
+                grid-template-columns: 90% 10%;
+                margin-bottom: 0.5rem;
+
+                span {
+                    margin: auto;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
