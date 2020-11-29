@@ -5,7 +5,7 @@ import AddLink from "./AddLink";
 import InputDetails from "./InputDetails";
 
 const MyLinks = () => {
-    const { user, setUser, UpdateLink } = useContext(UserContext);
+    const { user, setUser, UpdateLink, DeleteLink } = useContext(UserContext);
 
     const handleOnDragEnd = (result) => {
         if (!result.destination) return;
@@ -36,11 +36,14 @@ const MyLinks = () => {
 
     const handleDelete = (index) => {
         let tempData = user.links;
+        const tempIndex = tempData[index]._id;
         tempData.splice(index, 1);
         setUser({
             ...user,
             links: tempData,
         });
+
+        DeleteLink(tempIndex);
     };
 
     return (

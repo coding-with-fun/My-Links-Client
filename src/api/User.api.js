@@ -33,3 +33,14 @@ export const updateLink = async (body) => {
     const apiData = await Axios.patch(url, body, { headers: headers });
     return apiData.data.userDetails;
 };
+
+export const deleteLink = async (body) => {
+    const url = mid_url + "/deletelink";
+    headers = {
+        "x-auth-token": token,
+        _id: body,
+    };
+
+    const apiData = await Axios.delete(url, { headers: headers });
+    return apiData.data.userDetails;
+};
