@@ -5,25 +5,43 @@
         .form-group {
             margin-bottom: 2rem;
 
-            .details__container {
-                .details-group {
-                    display: grid;
-                    grid-template-columns: 90% 10%;
-                    margin-bottom: 0.5rem;
+            .admin_input_details__container {
+                display: grid;
+                grid-template-columns: 10% 90%;
+                margin-bottom: 0.5rem;
 
-                    .form-control {
-                        border: none;
-                        outline: none;
-                        box-shadow: none;
-                    }
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
-                    span {
-                        margin: auto;
+                    .fas {
+                        margin-bottom: 8px;
                         cursor: pointer;
-                        color: var(--light);
+                        padding: 7px;
+                    }
+                }
 
-                        .fa-trash {
-                            color: var(--danger);
+                .details__container {
+                    .details-group {
+                        display: grid;
+                        grid-template-columns: 90% 10%;
+                        margin-bottom: 0.5rem;
+
+                        .form-control {
+                            border: none;
+                            outline: none;
+                            box-shadow: none;
+                        }
+
+                        span {
+                            margin: auto;
+                            cursor: pointer;
+                            color: var(--light);
+
+                            .fa-trash {
+                                color: var(--danger);
+                            }
                         }
                     }
                 }

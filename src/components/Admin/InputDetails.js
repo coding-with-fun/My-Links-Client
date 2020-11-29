@@ -9,6 +9,9 @@ const InputDetails = ({ link }) => {
 
     return (
         <div className="admin_input_details__container">
+            <span>
+                <i class="fas fa-sort"></i>
+            </span>
             <div className="details__container">
                 <div className="details-group">
                     <input
