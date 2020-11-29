@@ -4,13 +4,20 @@ import { UserContext } from "../../context/UserContext";
 const AddLink = () => {
     const { user, setUser } = useContext(UserContext);
 
-    const [toggleAddLink, setToggleAddLink] = useState(false);
+    const [toggleAddLink, setToggleAddLink] = useState(true);
     const [newLinkDetails, setNewLinkDetails] = useState({
         name: "",
         url: "",
     });
 
     const handleToggle = () => {
+        if (!toggleAddLink) {
+            setNewLinkDetails({
+                name: "",
+                url: "",
+            });
+        }
+
         setToggleAddLink(!toggleAddLink);
     };
 
@@ -32,6 +39,7 @@ const AddLink = () => {
             name: "",
             url: "",
         });
+        setToggleAddLink(true);
     };
 
     return (

@@ -9,7 +9,6 @@ const MyLinks = () => {
     return (
         <div className="admin_my_links__container">
             <form className="links-form">
-                {console.log(user.links)}
                 {user.links.map((link) => {
                     return (
                         <div className="form-group" key={link.url}>
