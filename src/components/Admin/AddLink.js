@@ -31,11 +31,11 @@ const AddLink = () => {
     const handleSave = () => {
         if (newLinkDetails.name && newLinkDetails.url) {
             AddLink(newLinkDetails);
-            setNewLinkDetails({
-                name: "",
-                url: "",
-            });
         }
+        setNewLinkDetails({
+            name: "",
+            url: "",
+        });
 
         setToggleAddLink(true);
     };
