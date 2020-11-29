@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import { fetchData } from "../api/User.api";
+import { fetchData, updateLink } from "../api/User.api";
 
 // Create context
 export const UserContext = createContext();
@@ -20,8 +20,17 @@ export const UserProvider = (props) => {
         setUser(user_data);
     };
 
+    const UpdateLink = async (body) => {
+        const { status } = await updateLink(body);
+        if (status) {
+            GetUserData();
+        }
+    };
+
     return (
-        <UserContext.Provider value={{ user, setUser, GetUserData }}>
+        <UserContext.Provider
+            value={{ user, setUser, GetUserData, UpdateLink }}
+        >
             {props.children}
         </UserContext.Provider>
     );

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const InputDetails = ({
+    _id,
     url,
     name,
     index,
@@ -11,6 +12,7 @@ const InputDetails = ({
     const [isEditing, setIsEditing] = useState(false);
     const [isChanged, setIsChanged] = useState(false);
     const [tempLink, setTempLink] = useState({
+        _id: "",
         name: "",
         url: "",
     });
@@ -32,10 +34,11 @@ const InputDetails = ({
 
     useEffect(() => {
         setTempLink({
+            _id,
             url,
             name,
         });
-    }, [url, name]);
+    }, [_id, url, name]);
 
     return (
         <div className="admin_input_details__container">

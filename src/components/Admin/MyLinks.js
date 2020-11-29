@@ -5,7 +5,7 @@ import AddLink from "./AddLink";
 import InputDetails from "./InputDetails";
 
 const MyLinks = () => {
-    const { user, setUser } = useContext(UserContext);
+    const { user, setUser, UpdateLink } = useContext(UserContext);
 
     const handleOnDragEnd = (result) => {
         if (!result.destination) return;
@@ -28,6 +28,10 @@ const MyLinks = () => {
             ...user,
             links: tempData,
         });
+
+        console.log(data);
+
+        UpdateLink(data);
     };
 
     const handleDelete = (index) => {
@@ -65,6 +69,7 @@ const MyLinks = () => {
                                                     {...provided.draggableProps}
                                                 >
                                                     <InputDetails
+                                                        _id={_id}
                                                         url={url}
                                                         name={name}
                                                         index={index}
