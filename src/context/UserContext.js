@@ -27,9 +27,10 @@ export const UserProvider = (props) => {
     };
 
     const UpdateUser = async (body) => {
-        const user_data = await updateUser(body);
-        console.log(user_data);
-        setUser(user_data);
+        const { status } = await updateUser(body);
+        if (status) {
+            GetUserData();
+        }
     };
 
     const AddLink = async (body) => {

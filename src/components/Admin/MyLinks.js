@@ -16,13 +16,13 @@ const MyLinks = () => {
         const [reorderedItem] = items.splice(result.source.index, 1);
         items.splice(result.destination.index, 0, reorderedItem);
 
-        setUser({
+        const tempUser = {
             ...user,
             links: items,
-        });
+        };
 
-        console.log(user);
-        UpdateUser(user);
+        setUser(tempUser);
+        UpdateUser(tempUser);
     };
 
     const handleSave = (data) => {
