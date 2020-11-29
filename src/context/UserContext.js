@@ -1,5 +1,11 @@
 import React, { createContext, useState } from "react";
-import { addLink, deleteLink, fetchData, updateLink } from "../api/User.api";
+import {
+    addLink,
+    deleteLink,
+    fetchData,
+    updateLink,
+    updateUser,
+} from "../api/User.api";
 
 // Create context
 export const UserContext = createContext();
@@ -18,6 +24,11 @@ export const UserProvider = (props) => {
     const GetUserData = async (username) => {
         const user_data = await fetchData(username);
         setUser(user_data);
+    };
+
+    const UpdateUser = async (body) => {
+        const user_data = await updateUser(body);
+        console.log(user_data);
     };
 
     const AddLink = async (body) => {
@@ -42,6 +53,7 @@ export const UserProvider = (props) => {
             value={{
                 user,
                 setUser,
+                UpdateUser,
                 GetUserData,
                 AddLink,
                 UpdateLink,

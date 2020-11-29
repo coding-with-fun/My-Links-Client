@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../context/UserContext";
 
 const UserDetails = () => {
-    const { user, setUser } = useContext(UserContext);
+    const { user, setUser, UpdateUser } = useContext(UserContext);
 
     const [aboutCharacters, setAboutCharacters] = useState({
         count: 0,
@@ -27,6 +27,10 @@ const UserDetails = () => {
             count: user.about.length,
         });
     }, [user]);
+
+    const handleSave = () => {
+        UpdateUser(user);
+    };
 
     const handleChange = (e) => {
         if (!valueUpdated) {
@@ -102,7 +106,7 @@ const UserDetails = () => {
             </form>
 
             {valueUpdated && (
-                <div className="submit_btn__container">
+                <div className="submit_btn__container" onClick={handleSave}>
                     <span>Update</span>
                 </div>
             )}
