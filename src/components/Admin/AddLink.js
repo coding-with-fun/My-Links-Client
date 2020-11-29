@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { UserContext } from "../../context/UserContext";
 
 const AddLink = () => {
+    const { user, setUser } = useContext(UserContext);
+
     const [toggleAddLink, setToggleAddLink] = useState(false);
     const [newLinkDetails, setNewLinkDetails] = useState({
         name: "",
@@ -15,6 +18,19 @@ const AddLink = () => {
         setNewLinkDetails({
             ...newLinkDetails,
             [e.target.id]: e.target.value,
+        });
+    };
+
+    const handleSave = () => {
+        let tempData = user.links;
+        tempData.push(newLinkDetails);
+        setUser({
+            ...user,
+            links: tempData,
+        });
+        setNewLinkDetails({
+            name: "",
+            url: "",
         });
     };
 
@@ -37,8 +53,8 @@ const AddLink = () => {
                                 className="form-control"
                                 placeholder="Name of link"
                             />
-                            <span>
-                                <i class="fas fa-plus-circle"></i>
+                            <span onClick={handleSave}>
+                                <i className="fas fa-plus-circle"></i>
                             </span>
                         </div>
 
