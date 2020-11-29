@@ -6,6 +6,16 @@ import InputDetails from "./InputDetails";
 const MyLinks = () => {
     const { user, setUser } = useContext(UserContext);
 
+    const handleSave = (index, data) => {
+        let tempData = user.links;
+        tempData.splice(index, 1, data);
+
+        setUser({
+            ...user,
+            links: tempData,
+        });
+    };
+
     const handleDelete = (index) => {
         let tempData = user.links;
         tempData.splice(index, 1);
@@ -27,6 +37,7 @@ const MyLinks = () => {
                                 link={link}
                                 index={index}
                                 handleDelete={handleDelete}
+                                handleSave={handleSave}
                             />
                         </div>
                     );
