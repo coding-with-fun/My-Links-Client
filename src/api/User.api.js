@@ -20,7 +20,6 @@ export const fetchData = async (username) => {
     }
 
     const apiData = await Axios.get(url, { headers: headers });
-    console.log(apiData.data.userDetails);
     return apiData.data.userDetails;
 };
 

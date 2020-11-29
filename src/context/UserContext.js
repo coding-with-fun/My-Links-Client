@@ -29,7 +29,6 @@ export const UserProvider = (props) => {
 
     const DeleteLink = async (body) => {
         const user_data = await deleteLink(body);
-        console.log(user_data);
         setUser(user_data);
     };
 

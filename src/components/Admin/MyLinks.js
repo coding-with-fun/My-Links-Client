@@ -29,8 +29,6 @@ const MyLinks = () => {
             links: tempData,
         });
 
-        console.log(data);
-
         UpdateLink(data);
     };
 
