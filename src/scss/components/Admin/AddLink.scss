@@ -2,15 +2,13 @@
     margin-bottom: 2rem;
 
     .btn__container {
-        width: fit-content;
+        max-width: 120px;
         margin: auto;
-
-        span {
-            padding: 5px 10px;
-            background: var(--primary);
-            border-radius: 5px;
-            cursor: pointer;
-        }
+        background: var(--primary);
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
     }
 
     .add_link__container {
