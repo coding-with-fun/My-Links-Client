@@ -9,6 +9,8 @@ const UserDetails = () => {
         class: "",
     });
 
+    const [valueUpdated, setValueUpdated] = useState(false);
+
     useEffect(() => {
         let aboutClass = "primary";
 
@@ -27,6 +29,10 @@ const UserDetails = () => {
     }, [user]);
 
     const handleChange = (e) => {
+        if (!valueUpdated) {
+            setValueUpdated(true);
+        }
+
         if (e.target.id === "about") {
             if (e.target.value.length < 301) {
                 setUser({
@@ -95,9 +101,11 @@ const UserDetails = () => {
                 </div>
             </form>
 
-            <div className="submit_btn__container">
-                <span>Update</span>
-            </div>
+            {valueUpdated && (
+                <div className="submit_btn__container">
+                    <span>Update</span>
+                </div>
+            )}
         </div>
     );
 };
