@@ -29,16 +29,19 @@ const AddLink = () => {
     };
 
     const handleSave = () => {
-        let tempData = user.links;
-        tempData.push(newLinkDetails);
-        setUser({
-            ...user,
-            links: tempData,
-        });
-        setNewLinkDetails({
-            name: "",
-            url: "",
-        });
+        if (newLinkDetails.name && newLinkDetails.url) {
+            let tempData = user.links;
+            tempData.push(newLinkDetails);
+            setUser({
+                ...user,
+                links: tempData,
+            });
+            setNewLinkDetails({
+                name: "",
+                url: "",
+            });
+        }
+
         setToggleAddLink(true);
     };
 

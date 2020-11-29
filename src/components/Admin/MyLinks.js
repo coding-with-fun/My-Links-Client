@@ -8,6 +8,8 @@ const MyLinks = () => {
 
     return (
         <div className="admin_my_links__container">
+            <AddLink />
+
             <form className="links-form">
                 {user.links.map((link) => {
                     return (
@@ -17,8 +19,6 @@ const MyLinks = () => {
                     );
                 })}
             </form>
-
-            <AddLink />
         </div>
     );
 };
