@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-const InputDetails = ({ link, index, handleDelete, handleSave }) => {
+const InputDetails = ({
+    url,
+    name,
+    index,
+    handleDelete,
+    handleSave,
+    provided,
+}) => {
     const [isEditing, setIsEditing] = useState(false);
     const [isChanged, setIsChanged] = useState(false);
     const [tempLink, setTempLink] = useState({
@@ -24,12 +31,15 @@ const InputDetails = ({ link, index, handleDelete, handleSave }) => {
     };
 
     useEffect(() => {
-        setTempLink(link);
-    }, [link]);
+        setTempLink({
+            url,
+            name,
+        });
+    }, [url, name]);
 
     return (
         <div className="admin_input_details__container">
-            <span>
+            <span {...provided.dragHandleProps}>
                 <i className="fas fa-sort"></i>
             </span>
             <div className="details__container">
