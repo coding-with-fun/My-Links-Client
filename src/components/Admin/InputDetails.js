@@ -11,6 +11,7 @@ const InputDetails = ({
 }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [isChanged, setIsChanged] = useState(false);
+    const [emptyData, setEmptyData] = useState(false);
     const [tempLink, setTempLink] = useState({
         _id: "",
         name: "",
@@ -20,6 +21,14 @@ const InputDetails = ({
     const handleEditToggle = () => {
         setIsEditing(!isEditing);
         setIsChanged(false);
+
+        if (!isChanged && emptyData) {
+            setTempLink({
+                _id,
+                url,
+                name,
+            });
+        }
     };
 
     const handleChange = (e) => {
@@ -30,6 +39,10 @@ const InputDetails = ({
             ...tempLink,
             [e.target.id]: e.target.value,
         });
+        if (!e.target.value) {
+            setIsChanged(false);
+            setEmptyData(true);
+        }
     };
 
     useEffect(() => {
@@ -61,7 +74,7 @@ const InputDetails = ({
                             isChanged ? (
                                 <i
                                     className="fas fa-check"
-                                    onClick={() => handleSave(index, tempLink)}
+                                    onClick={() => handleSave(tempLink)}
                                 ></i>
                             ) : (
                                 <i className="fas fa-times"></i>

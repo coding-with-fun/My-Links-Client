@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { UserContext } from "../../context/UserContext";
 
 const AddLink = () => {
-    const { user, setUser } = useContext(UserContext);
+    const { AddLink } = useContext(UserContext);
 
     const [toggleAddLink, setToggleAddLink] = useState(true);
     const [newLinkDetails, setNewLinkDetails] = useState({
@@ -30,12 +30,7 @@ const AddLink = () => {
 
     const handleSave = () => {
         if (newLinkDetails.name && newLinkDetails.url) {
-            let tempData = user.links;
-            tempData.push(newLinkDetails);
-            setUser({
-                ...user,
-                links: tempData,
-            });
+            AddLink(newLinkDetails);
             setNewLinkDetails({
                 name: "",
                 url: "",

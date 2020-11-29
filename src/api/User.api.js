@@ -23,6 +23,16 @@ export const fetchData = async (username) => {
     return apiData.data.userDetails;
 };
 
+export const addLink = async (body) => {
+    const url = mid_url + "/addlink";
+    headers = {
+        "x-auth-token": token,
+    };
+
+    const apiData = await Axios.post(url, body, { headers: headers });
+    return apiData.data.userDetails;
+};
+
 export const updateLink = async (body) => {
     const url = mid_url + "/updatelink";
     headers = {

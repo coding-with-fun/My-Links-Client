@@ -20,26 +20,15 @@ const MyLinks = () => {
         });
     };
 
-    const handleSave = (index, data) => {
-        let tempData = user.links;
-        tempData.splice(index, 1, data);
-
-        setUser({
-            ...user,
-            links: tempData,
-        });
-
-        UpdateLink(data);
+    const handleSave = (data) => {
+        if (data.url && data.name) {
+            UpdateLink(data);
+        }
     };
 
     const handleDelete = (index) => {
         let tempData = user.links;
         const tempIndex = tempData[index]._id;
-        tempData.splice(index, 1);
-        setUser({
-            ...user,
-            links: tempData,
-        });
 
         DeleteLink(tempIndex);
     };
