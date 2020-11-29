@@ -5,7 +5,9 @@ import AddLink from "./AddLink";
 import InputDetails from "./InputDetails";
 
 const MyLinks = () => {
-    const { user, setUser, UpdateLink, DeleteLink } = useContext(UserContext);
+    const { user, setUser, UpdateUser, UpdateLink, DeleteLink } = useContext(
+        UserContext
+    );
 
     const handleOnDragEnd = (result) => {
         if (!result.destination) return;
@@ -18,6 +20,9 @@ const MyLinks = () => {
             ...user,
             links: items,
         });
+
+        console.log(user);
+        UpdateUser(user);
     };
 
     const handleSave = (data) => {
