@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const InputDetails = ({ link }) => {
+const InputDetails = ({ link, index, handleDelete }) => {
     const [isEditing, setIsEditing] = useState(false);
 
     const handleEdit = () => {
@@ -40,7 +40,7 @@ const InputDetails = ({ link }) => {
                         value={link.url}
                         readOnly={isEditing ? false : true}
                     />
-                    <span>
+                    <span onClick={() => handleDelete(index)}>
                         <i className="fas fa-trash"></i>
                     </span>
                 </div>

@@ -4,17 +4,30 @@ import AddLink from "./AddLink";
 import InputDetails from "./InputDetails";
 
 const MyLinks = () => {
-    const { user } = useContext(UserContext);
+    const { user, setUser } = useContext(UserContext);
+
+    const handleDelete = (index) => {
+        let tempData = user.links;
+        tempData.splice(index, 1);
+        setUser({
+            ...user,
+            links: tempData,
+        });
+    };
 
     return (
         <div className="admin_my_links__container">
             <AddLink />
 
             <form className="links-form">
-                {user.links.map((link) => {
+                {user.links.map((link, index) => {
                     return (
-                        <div className="form-group" key={link.url}>
-                            <InputDetails link={link} />
+                        <div className="form-group" key={index}>
+                            <InputDetails
+                                link={link}
+                                index={index}
+                                handleDelete={handleDelete}
+                            />
                         </div>
                     );
                 })}
