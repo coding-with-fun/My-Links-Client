@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const InputDetails = ({ link, index, handleDelete, handleSave }) => {
     const [isEditing, setIsEditing] = useState(false);
+    const [isChanged, setIsChanged] = useState(false);
     const [tempLink, setTempLink] = useState({
         name: "",
         url: "",
@@ -9,9 +10,13 @@ const InputDetails = ({ link, index, handleDelete, handleSave }) => {
 
     const handleEditToggle = () => {
         setIsEditing(!isEditing);
+        setIsChanged(false);
     };
 
     const handleChange = (e) => {
+        if (!isChanged) {
+            setIsChanged(true);
+        }
         setTempLink({
             ...tempLink,
             [e.target.id]: e.target.value,
@@ -40,10 +45,14 @@ const InputDetails = ({ link, index, handleDelete, handleSave }) => {
                     />
                     <span onClick={() => handleEditToggle()}>
                         {isEditing ? (
-                            <i
-                                className="fas fa-times-circle"
-                                onClick={() => handleSave(index, tempLink)}
-                            ></i>
+                            isChanged ? (
+                                <i
+                                    className="fas fa-check"
+                                    onClick={() => handleSave(index, tempLink)}
+                                ></i>
+                            ) : (
+                                <i className="fas fa-times"></i>
+                            )
                         ) : (
                             <i className="fas fa-pen"></i>
                         )}
