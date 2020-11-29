@@ -38,6 +38,10 @@ const UserDetails = () => {
             setValueUpdated(true);
         }
 
+        if (!e.target.value) {
+            setValueUpdated(false);
+        }
+
         if (e.target.id === "about") {
             if (e.target.value.length < 301) {
                 setUser({
