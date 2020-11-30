@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import { UserContext } from "../../context/UserContext";
+import { UserContext } from "../../../context/UserContext";
 import AddLink from "./AddLink";
 import InputDetails from "./InputDetails";
 

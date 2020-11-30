@@ -22,18 +22,11 @@ const User = () => {
             <Header />
 
             <div className="details__container">
-                {user?.about && (
-                    <>
-                        {/* <hr /> */}
-
-                        <About />
-                    </>
-                )}
+                {user?.about && <About />}
 
                 {user?.links.length > 0 && (
                     <>
                         <hr />
-
                         <Links />
                     </>
                 )}
