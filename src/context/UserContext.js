@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+import { userSignIn } from "../api/Auth.api";
 import {
     addLink,
     deleteLink,
@@ -20,6 +21,12 @@ export const UserProvider = (props) => {
         userImage: "",
         userName: "",
     });
+
+    const UserSignIn = async (body) => {
+        const data = await userSignIn(body);
+        console.log(data);
+        localStorage.setItem("my-links-user-id", data.token);
+    };
 
     const GetUserData = async (username) => {
         const user_data = await fetchData(username);
@@ -55,6 +62,7 @@ export const UserProvider = (props) => {
             value={{
                 user,
                 setUser,
+                UserSignIn,
                 UpdateUser,
                 GetUserData,
                 AddLink,
